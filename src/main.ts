@@ -4,15 +4,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="flex flex-col items-center justify-center min-h-dvh bg-gray-50 text-gray-800 p-8">
     <div class="text-center mb-8">
       <h1 class="text-4xl font-bold mb-2">Greeting App</h1>
-      <p class="text-gray-500">Enter your name and click the button!</p>
+      <p class="text-gray-500">Enter names (one per line) and click the button!</p>
     </div>
-    <div class="flex gap-3 items-center mb-6">
-      <input
+    <div class="flex flex-col gap-3 items-center mb-6">
+      <textarea
         id="name-input"
-        type="text"
-        placeholder="Enter your name"
-        class="border border-gray-300 rounded-lg px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
-      />
+        placeholder="Enter names, one per line"
+        rows="4"
+        class="border border-gray-300 rounded-lg px-4 py-2 text-lg w-full max-w-md focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent resize-y"
+      ></textarea>
       <button
         id="hello-btn"
         type="button"
@@ -25,22 +25,29 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 
-const nameInput = document.querySelector<HTMLInputElement>('#name-input')!
+const nameInput = document.querySelector<HTMLTextAreaElement>('#name-input')!
 const helloBtn = document.querySelector<HTMLButtonElement>('#hello-btn')!
 const greetingEl = document.querySelector<HTMLDivElement>('#greeting')!
 
 helloBtn.addEventListener('click', () => {
-  const name = nameInput.value.trim()
-  if (name) {
-    greetingEl.textContent = `Hello ${name}`
+  const names = nameInput.value
+    .split('\n')
+    .map(name => name.trim())
+    .filter(name => name.length > 0)
+
+  if (names.length === 0) {
+    greetingEl.textContent = 'Please enter at least one name!'
+  } else if (names.length === 1) {
+    greetingEl.textContent = `Hello ${names[0]}`
   } else {
-    greetingEl.textContent = 'Please enter a name!'
+    const last = names.pop()!
+    greetingEl.textContent = `Hello ${names.join(', ')} and ${last}`
   }
 })
 
-// Allow pressing Enter to trigger the greeting
+// Allow pressing Ctrl+Enter (or Cmd+Enter on Mac) to trigger the greeting
 nameInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
     helloBtn.click()
   }
 })
