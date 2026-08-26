@@ -12,3 +12,4 @@ be referenced when making changes in the corresponding domain.
 | [`data-validation.md`](./data-validation.md) | Input validation, Zod schemas, runtime type safety |
 | [`component-safety.md`](./component-safety.md) | React component props, rendering, side effects |
 | [`typescript-safety.md`](./typescript-safety.md) | TypeScript strict mode, linting, type boundaries |
+| [`planning-priority.md`](./planning-priority.md) | Agent workflow discipline — planning before building |
