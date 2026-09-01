@@ -6,3 +6,4 @@ This directory contains the ADRs for this project.  ADRs will be in seperate fil
 
 | File | Reason |
 |------|--------|
+|[001-mdx-content-architecture.md](./001-mdx-content-architecture.md)|Records the build-time, filesystem-backed MDX content architecture.|
