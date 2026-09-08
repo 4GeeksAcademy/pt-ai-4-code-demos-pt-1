@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SEO META TAGS ===== -->
+    <meta name="description" content="Explore the Solar System with this semantic HTML & BEM CSS demo. Learn about planets, space exploration milestones, and cosmic facts — built with accessible, standards-based markup." />
+    <meta name="keywords" content="solar system, planets, space exploration, semantic HTML, BEM CSS, cosmos, astronomy, HTML demo" />
+    <meta name="author" content="Cosmos Education Project" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://cosmos-education.demo/" />
+
+    <!-- ===== OPEN GRAPH (Facebook, LinkedIn, etc.) ===== -->
+    <meta property="og:title" content="Exploring the Cosmos — Semantic HTML &amp; BEM CSS Demo" />
+    <meta property="og:description" content="Discover the Solar System through a hands-on semantic HTML & BEM CSS demo. Includes planet facts, a space exploration timeline, and a glossary of astronomical terms." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cosmos-education.demo/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=1200&q=80" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Cosmos Education Project" />
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Exploring the Cosmos — Semantic HTML &amp; BEM CSS Demo" />
+    <meta name="twitter:description" content="Discover the Solar System through a hands-on semantic HTML & BEM CSS demo." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=1200&q=80" />
+
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Exploring the Cosmos — Semantic HTML & BEM CSS Demo",
+      "description": "Explore the Solar System with this semantic HTML & BEM CSS demo. Learn about planets, space exploration milestones, and cosmic facts.",
+      "url": "https://cosmos-education.demo/",
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "mainEntity": {
+        "@type": "Article",
+        "headline": "Our Place in the Universe",
+        "description": "An educational article about the Solar System covering the eight planets, space exploration milestones, and key astronomical terms.",
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08",
+        "author": {
+          "@type": "Organization",
+          "name": "Cosmos Education Project"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Solar System",
+          "sameAs": "https://en.wikipedia.org/wiki/Solar_System"
+        },
+        "keywords": [
+          "solar system",
+          "planets",
+          "Mercury",
+          "Venus",
+          "Earth",
+          "Mars",
+          "Jupiter",
+          "Saturn",
+          "Uranus",
+          "Neptune",
+          "space exploration",
+          "astronomy"
+        ],
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=800&q=80",
+          "caption": "Digital illustration of the solar system showing the Sun and planets aligned"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cosmos Education Project"
+      }
+    }
+    </script>
+
+    <title>🌌 Exploring the Cosmos — Semantic HTML &amp; BEM CSS Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ===== SKIP TO CONTENT (a11y) ===== -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="header" role="banner">
+      <div class="header__inner">
+        <h1 class="header__title"><span aria-hidden="true">🌌</span> Exploring the Cosmos</h1>
+        <p class="header__tagline">
+          A <strong>semantic HTML</strong> demo — powered by
+          <strong>BEM</strong> methodology &amp; modern CSS
+        </p>
+      </div>
+
+      <!-- ===== NAV ===== -->
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#overview" aria-current="page">Overview</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#planets">Planets</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#exploration">Exploration</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#glossary">Glossary</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main" id="main-content">
+      <!-- ===== OVERVIEW ===== -->
+      <article class="article" id="overview">
+        <header class="article__header">
+          <h2 class="article__title">Our Place in the Universe</h2>
+          <p class="article__meta">
+            Published <time datetime="2026-09-08">September 8, 2026</time>
+            &middot; Updated <time datetime="2026-09-08">today</time>
+          </p>
+        </header>
+
+        <p>
+          The <strong>Solar System</strong> is the gravitationally bound system
+          of the Sun and the objects that orbit it. It formed
+          <mark class="highlight">4.6 billion years ago</mark> from the
+          gravitational collapse of a giant interstellar molecular cloud.
+        </p>
+
+        <blockquote class="pullquote" cite="https://en.wikipedia.org/wiki/Solar_System">
+          <p class="pullquote__text">
+            "The Solar System is located in the Milky Way galaxy, about
+            <strong>27,000 light-years</strong> from the galactic center, on the
+            inner edge of one of the spiral-shaped concentrations of gas and
+            dust called the Orion Arm."
+          </p>
+          <footer class="pullquote__attribution">
+            — <cite>Wikipedia</cite>
+          </footer>
+        </blockquote>
+
+        <p>
+          There are <strong>eight known planets</strong> orbiting the Sun, along
+          with dwarf planets, moons, asteroids, comets, and other small bodies.
+          The four inner planets are rocky, while the four outer planets are gas
+          or ice giants.
+        </p>
+
+        <!-- ===== FIGURE ===== -->
+        <figure class="figure" aria-labelledby="fig-caption">
+          <div class="figure__media">
+            <img
+              class="figure__image"
+              src="https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=800&q=80"
+              alt="Digital illustration of the solar system showing the Sun and planets aligned"
+              loading="lazy"
+            />
+          </div>
+          <figcaption class="figure__caption" id="fig-caption">
+            An artistic rendering of our Solar System — image via
+            <a href="https://unsplash.com">Unsplash</a>
+          </figcaption>
+        </figure>
+
+        <section class="section" id="planets">
+          <h3 class="section__title">The Eight Planets</h3>
+
+          <div class="card-grid">
+            <!-- Planet Cards -->
+            <article class="card card--terrestrial">
+              <h4 class="card__title">Mercury</h4>
+              <p class="card__desc">
+                The smallest planet and closest to the Sun. A year on Mercury is
+                just <strong>88 Earth days</strong>.
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">4,879 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Type</dt>
+                  <dd class="card__stat-value">Terrestrial</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card card--terrestrial">
+              <h4 class="card__title">Venus</h4>
+              <p class="card__desc">
+                The hottest planet due to a runaway greenhouse effect. It rotates
+                <strong>backwards</strong> compared to most planets.
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">12,104 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Type</dt>
+                  <dd class="card__stat-value">Terrestrial</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card card--terrestrial card--featured">
+              <h4 class="card__title"><span aria-hidden="true">🌍</span> Earth</h4>
+              <p class="card__desc">
+                Our home — the only known planet to support life. About
+                <strong>71%</strong> of its surface is covered by water.
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">12,756 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Moons</dt>
+                  <dd class="card__stat-value">1</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card card--terrestrial">
+              <h4 class="card__title">Mars</h4>
+              <p class="card__desc">
+                The <strong>Red Planet</strong> — home to the tallest volcano in
+                the Solar System, <em>Olympus Mons</em> (21.9 km).
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">6,792 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Moons</dt>
+                  <dd class="card__stat-value">2</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card card--gas-giant">
+              <h4 class="card__title">Jupiter</h4>
+              <p class="card__desc">
+                The largest planet — its Great Red Spot is a storm larger than
+                Earth that has raged for <strong>hundreds of years</strong>.
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">142,984 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Moons</dt>
+                  <dd class="card__stat-value">95</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card card--gas-giant">
+              <h4 class="card__title">Saturn</h4>
+              <p class="card__desc">
+                Famous for its stunning ring system made of ice and rock. It is
+                the least dense planet — it would <strong>float in water</strong>.
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">120,536 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Moons</dt>
+                  <dd class="card__stat-value">146</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card card--ice-giant">
+              <h4 class="card__title">Uranus</h4>
+              <p class="card__desc">
+                An ice giant that rotates on its <strong>side</strong> — its
+                axial tilt is a jaw-dropping 98°.
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">51,118 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Moons</dt>
+                  <dd class="card__stat-value">28</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card card--ice-giant">
+              <h4 class="card__title">Neptune</h4>
+              <p class="card__desc">
+                The windiest planet — gusts can reach
+                <strong>2,100 km/h</strong>. It was the first planet located
+                via mathematical prediction.
+              </p>
+              <dl class="card__stats">
+                <div class="card__stat">
+                  <dt class="card__stat-label">Diameter</dt>
+                  <dd class="card__stat-value">49,528 km</dd>
+                </div>
+                <div class="card__stat">
+                  <dt class="card__stat-label">Moons</dt>
+                  <dd class="card__stat-value">16</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== EXPLORATION ===== -->
+        <section class="section" id="exploration">
+          <h3 class="section__title">Space Exploration Timeline</h3>
+
+          <div class="timeline">
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="1957-10-04">1957</time>
+              <p class="timeline__event">
+                <strong>Sputnik 1</strong> — the first artificial satellite,
+                launched by the Soviet Union.
+              </p>
+            </div>
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="1969-07-20">1969</time>
+              <p class="timeline__event">
+                <strong>Apollo 11</strong> — humans first set foot on the Moon.
+                <q class="timeline__quote">"That's one small step for man…"</q>
+              </p>
+            </div>
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="1977-08-20">1977</time>
+              <p class="timeline__event">
+                <strong>Voyager 2</strong> launched — it later became the only
+                spacecraft to visit Uranus and Neptune.
+              </p>
+            </div>
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="1990-04-24">1990</time>
+              <p class="timeline__event">
+                The <strong>Hubble Space Telescope</strong> launched, revolutionising
+                astronomy with breathtaking deep-space images.
+              </p>
+            </div>
+            <div class="timeline__item">
+              <time class="timeline__date" datetime="2021-12-25">2021</time>
+              <p class="timeline__event">
+                <strong>James Webb Space Telescope</strong> launched — the most
+                powerful space telescope ever built.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ASIDE ===== -->
+        <aside class="aside" role="complementary" aria-labelledby="aside-title">
+          <h3 class="aside__title" id="aside-title"><span aria-hidden="true">🌠</span> Did You Know?</h3>
+          <p>
+            The Sun accounts for about
+            <strong>99.86%</strong> of the total mass of the Solar System. You
+            could fit roughly <strong>1.3 million Earths</strong> inside the
+            Sun!
+          </p>
+          <details class="details">
+            <summary class="details__summary">How do we know this?</summary>
+            <p class="details__body">
+              Scientists calculate the Sun's mass by observing the orbital
+              periods of the planets using
+              <strong>Kepler's laws of planetary motion</strong> and
+              <strong>Newton's law of universal gravitation</strong>.
+            </p>
+          </details>
+        </aside>
+
+        <footer class="article__footer">
+          <p>
+            Article compiled from public sources. Images courtesy of
+            <a href="https://unsplash.com">Unsplash</a>.
+          </p>
+        </footer>
+      </article>
+
+      <!-- ===== GLOSSARY ===== -->
+      <section class="glossary" id="glossary" aria-labelledby="glossary-title">
+        <h2 class="glossary__title" id="glossary-title"><span aria-hidden="true">📖</span> Glossary of Terms</h2>
+
+        <dl class="glossary__list">
+          <div class="glossary__term">
+            <dt class="glossary__name">Terrestrial Planet</dt>
+            <dd class="glossary__def">
+              A planet composed primarily of silicate rocks or metals. The four
+              inner planets — Mercury, Venus, Earth, Mars — are terrestrial.
+            </dd>
+          </div>
+          <div class="glossary__term">
+            <dt class="glossary__name">Gas Giant</dt>
+            <dd class="glossary__def">
+              A large planet composed mostly of hydrogen and helium. Jupiter and
+              Saturn are gas giants.
+            </dd>
+          </div>
+          <div class="glossary__term">
+            <dt class="glossary__name">Ice Giant</dt>
+            <dd class="glossary__def">
+              A giant planet made of heavier volatile elements — water, methane,
+              and ammonia — above a rocky core. Uranus and Neptune are ice
+              giants.
+            </dd>
+          </div>
+          <div class="glossary__term">
+            <dt class="glossary__name">Asteroid Belt</dt>
+            <dd class="glossary__def">
+              A region between Mars and Jupiter containing millions of rocky
+              bodies, the largest being the dwarf planet <em>Ceres</em>.
+            </dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <!-- ===== ASIDE: SIDEBAR ===== -->
+    <aside class="sidebar" role="complementary" aria-label="Quick facts and further reading">
+      <div class="sidebar__card">
+        <h3 class="sidebar__title"><span aria-hidden="true">🔭</span> Quick Facts</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Sun diameter: 1,391,000 km</li>
+          <li class="sidebar__item">Largest planet: Jupiter</li>
+          <li class="sidebar__item">Smallest planet: Mercury</li>
+          <li class="sidebar__item">Hottest planet: Venus (462 °C)</li>
+          <li class="sidebar__item">Coldest planet: Neptune (−218 °C)</li>
+          <li class="sidebar__item">Farthest from Sun: Neptune</li>
+        </ul>
+      </div>
+
+      <div class="sidebar__card">
+        <h3 class="sidebar__title"><span aria-hidden="true">📚</span> Further Reading</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="https://en.wikipedia.org/wiki/Solar_System">Solar System — Wikipedia</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="https://science.nasa.gov/solar-system/">NASA Solar System Exploration</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+              MDN: HTML elements reference
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ===== PAGE FOOTER ===== -->
+    <footer class="footer" id="contact" role="contentinfo">
+      <div class="footer__inner">
+        <address class="footer__address">
+          <strong>Cosmos Education Project</strong><br />
+          123 Galaxy Way, Space City, SC 98765<br />
+          <a href="mailto:hello@cosmos.demo">hello@cosmos.demo</a>
+        </address>
+
+        <p class="footer__copyright">
+          &copy; 2026 Cosmos Education Project &middot;
+          Built with <abbr title="Semantic HTML">semantic HTML</abbr> &amp;
+          <abbr title="Block Element Modifier">BEM</abbr> CSS
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
