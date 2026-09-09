@@ -1,0 +1,77 @@
+/* ============================================================
+   Tailwind CSS 4 Supplement — "Exploring the Cosmos" Demo
+   ============================================================
+   Minimal custom CSS to supplement Tailwind utility classes.
+   The bulk of styling lives in index.html as Tailwind classes.
+   ============================================================ */
+
+/* ----- 1. SMOOTH SCROLL ----- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+/* ----- 2. SKIP LINK (a11y) ----- */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1.5rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background: #0b0e1a;
+  color: #48cae4;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  border: 2px solid #48cae4;
+  border-radius: 6px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+/* ----- 3. TIMELINE VERTICAL LINE ----- */
+.timeline::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: 11px;
+  width: 2px;
+  background: linear-gradient(to bottom, #48cae4, transparent);
+}
+
+/* ----- 4. ACCESSIBILITY PREFERENCES ----- */
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: more) {
+  body {
+    background: #000 !important;
+  }
+}

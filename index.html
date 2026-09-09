@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SEO META TAGS ===== -->
+    <meta
+      name="description"
+      content="Explore the Solar System with this semantic HTML &amp; Tailwind CSS 4 demo. Learn about planets, space exploration milestones, and cosmic facts — built with accessible, standards-based markup."
+    />
+    <meta
+      name="keywords"
+      content="solar system, planets, space exploration, semantic HTML, Tailwind CSS, cosmos, astronomy, HTML demo"
+    />
+    <meta name="author" content="Cosmos Education Project" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://cosmos-education.demo/" />
+
+    <!-- ===== OPEN GRAPH (Facebook, LinkedIn, etc.) ===== -->
+    <meta
+      property="og:title"
+      content="Exploring the Cosmos — Semantic HTML &amp; Tailwind CSS 4 Demo"
+    />
+    <meta
+      property="og:description"
+      content="Discover the Solar System through a hands-on semantic HTML &amp; Tailwind CSS 4 demo. Includes planet facts, a space exploration timeline, and a glossary of astronomical terms."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cosmos-education.demo/" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=1200&q=80"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Cosmos Education Project" />
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Exploring the Cosmos — Semantic HTML &amp; Tailwind CSS 4 Demo"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover the Solar System through a hands-on semantic HTML &amp; Tailwind CSS 4 demo."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=1200&q=80"
+    />
+
+    <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Exploring the Cosmos — Semantic HTML & Tailwind CSS 4 Demo",
+        "description": "Explore the Solar System with this semantic HTML & Tailwind CSS 4 demo. Learn about planets, space exploration milestones, and cosmic facts.",
+        "url": "https://cosmos-education.demo/",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "mainEntity": {
+          "@type": "Article",
+          "headline": "Our Place in the Universe",
+          "description": "An educational article about the Solar System covering the eight planets, space exploration milestones, and key astronomical terms.",
+          "datePublished": "2026-09-08",
+          "dateModified": "2026-09-08",
+          "author": {
+            "@type": "Organization",
+            "name": "Cosmos Education Project"
+          },
+          "about": {
+            "@type": "Thing",
+            "name": "Solar System",
+            "sameAs": "https://en.wikipedia.org/wiki/Solar_System"
+          },
+          "keywords": [
+            "solar system",
+            "planets",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune",
+            "space exploration",
+            "astronomy"
+          ],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=800&q=80",
+            "caption": "Digital illustration of the solar system showing the Sun and planets aligned"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Cosmos Education Project"
+        }
+      }
+    </script>
+
+    <title>
+      🌌 Exploring the Cosmos — Semantic HTML &amp; Tailwind CSS 4 Demo
+    </title>
+
+    <!-- Tailwind CSS 4 via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-[#0b0e1a] text-[#edf2f4] font-[system-ui,'Segoe_UI',Roboto,'Helvetica_Neue',sans-serif] leading-relaxed min-h-screen"
+  >
+    <!-- ===== SKIP TO CONTENT (a11y) ===== -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <header
+      class="max-w-[1200px] mx-auto px-6 py-8 mt-4 mb-6 rounded-[16px] bg-gradient-to-br from-[#131a33] to-[#1a2a4a] border border-white/10 shadow-lg"
+      role="banner"
+    >
+      <div class="mb-6">
+        <h1
+          class="font-serif text-4xl sm:text-5xl font-bold text-[#48cae4] leading-tight"
+        >
+          <span aria-hidden="true">🌌</span> Exploring the Cosmos
+        </h1>
+        <p class="text-[#a8b2c1] mt-1 text-lg">
+          A <strong class="text-[#ffd166]">semantic HTML</strong> demo — powered
+          by
+          <strong class="text-[#ffd166]">Tailwind CSS 4</strong>
+        </p>
+      </div>
+
+      <!-- ===== NAV ===== -->
+      <nav class="border-t border-white/10 pt-4" aria-label="Main navigation">
+        <ul class="flex flex-wrap gap-1">
+          <li>
+            <a
+              class="inline-block px-4 py-2 rounded-[6px] text-sm font-semibold uppercase tracking-wider bg-[#48cae4] text-[#0b0e1a] hover:bg-[#6dd5ed] transition-colors no-underline"
+              href="#overview"
+              aria-current="page"
+              >Overview</a
+            >
+          </li>
+          <li>
+            <a
+              class="inline-block px-4 py-2 rounded-[6px] text-sm font-semibold uppercase tracking-wider text-[#a8b2c1] hover:bg-white/10 hover:text-[#edf2f4] transition-colors no-underline"
+              href="#planets"
+              >Planets</a
+            >
+          </li>
+          <li>
+            <a
+              class="inline-block px-4 py-2 rounded-[6px] text-sm font-semibold uppercase tracking-wider text-[#a8b2c1] hover:bg-white/10 hover:text-[#edf2f4] transition-colors no-underline"
+              href="#exploration"
+              >Exploration</a
+            >
+          </li>
+          <li>
+            <a
+              class="inline-block px-4 py-2 rounded-[6px] text-sm font-semibold uppercase tracking-wider text-[#a8b2c1] hover:bg-white/10 hover:text-[#edf2f4] transition-colors no-underline"
+              href="#glossary"
+              >Glossary</a
+            >
+          </li>
+          <li>
+            <a
+              class="inline-block px-4 py-2 rounded-[6px] text-sm font-semibold uppercase tracking-wider text-[#a8b2c1] hover:bg-white/10 hover:text-[#edf2f4] transition-colors no-underline"
+              href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== MAIN LAYOUT: content + sidebar ===== -->
+    <div
+      class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-6 lg:gap-8"
+    >
+      <!-- ===== MAIN CONTENT ===== -->
+      <main id="main-content">
+        <!-- ===== OVERVIEW ===== -->
+        <article id="overview" class="flex flex-col gap-6">
+          <header>
+            <h2
+              class="font-serif text-3xl sm:text-4xl font-bold text-[#ffd166]"
+            >
+              Our Place in the Universe
+            </h2>
+            <p class="text-sm text-[#a8b2c1] mt-1">
+              Published
+              <time datetime="2026-09-08">September 8, 2026</time> &middot;
+              Updated <time datetime="2026-09-08">today</time>
+            </p>
+          </header>
+
+          <p>
+            The <strong>Solar System</strong> is the gravitationally bound
+            system of the Sun and the objects that orbit it. It formed
+            <mark
+              class="bg-[#ffd166]/30 text-[#ffd166] px-1.5 py-0.5 rounded-[3px]"
+              >4.6 billion years ago</mark
+            >
+            from the gravitational collapse of a giant interstellar molecular
+            cloud.
+          </p>
+
+          <blockquote
+            class="relative my-6 py-6 pl-8 pr-6 border-l-4 border-[#48cae4] bg-white/5 rounded-r-[6px]"
+            cite="https://en.wikipedia.org/wiki/Solar_System"
+          >
+            <span
+              class="absolute top-1 left-2 text-6xl leading-none text-[#48cae4] opacity-30 pointer-events-none select-none"
+              aria-hidden="true"
+              >&ldquo;</span
+            >
+            <p class="italic text-lg">
+              "The Solar System is located in the Milky Way galaxy, about
+              <strong>27,000 light-years</strong> from the galactic center, on
+              the inner edge of one of the spiral-shaped concentrations of gas
+              and dust called the Orion Arm."
+            </p>
+            <footer class="mt-2 text-sm text-[#a8b2c1]">
+              — <cite class="not-italic text-[#48cae4]">Wikipedia</cite>
+            </footer>
+          </blockquote>
+
+          <p>
+            There are <strong>eight known planets</strong> orbiting the Sun,
+            along with dwarf planets, moons, asteroids, comets, and other small
+            bodies. The four inner planets are rocky, while the four outer
+            planets are gas or ice giants.
+          </p>
+
+          <!-- ===== FIGURE ===== -->
+          <figure aria-labelledby="fig-caption">
+            <div class="rounded-[10px] overflow-hidden shadow-lg">
+              <img
+                class="w-full object-cover aspect-video hover:scale-105 transition-transform duration-300"
+                src="https://images.unsplash.com/photo-1614313913007-3e4ef4f22125?w=800&q=80"
+                alt="Digital illustration of the solar system showing the Sun and planets aligned"
+                loading="lazy"
+              />
+            </div>
+            <figcaption
+              id="fig-caption"
+              class="mt-2 text-sm text-[#a8b2c1] text-center"
+            >
+              An artistic rendering of our Solar System — image via
+              <a
+                class="text-[#48cae4] underline hover:text-[#ffd166] transition-colors"
+                href="https://unsplash.com"
+                >Unsplash</a
+              >
+            </figcaption>
+          </figure>
+
+          <!-- ===== PLANETS ===== -->
+          <section id="planets" class="mt-8">
+            <h3 class="font-serif text-2xl font-bold text-[#ffd166] mb-6">
+              The Eight Planets
+            </h3>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            >
+              <!-- Mercury -->
+              <article
+                class="bg-white/5 border border-white/10 rounded-[10px] p-6 border-t-[3px] border-t-[#48cae4] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(72,202,228,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">Mercury</h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  The smallest planet and closest to the Sun. A year on Mercury
+                  is just <strong>88 Earth days</strong>.
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#48cae4] font-semibold">4,879 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Type</dt>
+                    <dd class="text-[#48cae4] font-semibold">Terrestrial</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <!-- Venus -->
+              <article
+                class="bg-white/5 border border-white/10 rounded-[10px] p-6 border-t-[3px] border-t-[#48cae4] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(72,202,228,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">Venus</h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  The hottest planet due to a runaway greenhouse effect. It
+                  rotates
+                  <strong>backwards</strong> compared to most planets.
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#48cae4] font-semibold">12,104 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Type</dt>
+                    <dd class="text-[#48cae4] font-semibold">Terrestrial</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <!-- Earth (featured) -->
+              <article
+                class="bg-[#131a33] border border-[#48cae4]/40 rounded-[10px] p-6 border-t-[3px] border-t-[#48cae4] scale-[1.02] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(72,202,228,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">
+                  <span aria-hidden="true">🌍</span> Earth
+                </h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  Our home — the only known planet to support life. About
+                  <strong>71%</strong> of its surface is covered by water.
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#48cae4] font-semibold">12,756 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Moons</dt>
+                    <dd class="text-[#48cae4] font-semibold">1</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <!-- Mars -->
+              <article
+                class="bg-white/5 border border-white/10 rounded-[10px] p-6 border-t-[3px] border-t-[#48cae4] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(72,202,228,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">Mars</h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  The <strong>Red Planet</strong> — home to the tallest volcano
+                  in the Solar System, <em>Olympus Mons</em> (21.9 km).
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#48cae4] font-semibold">6,792 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Moons</dt>
+                    <dd class="text-[#48cae4] font-semibold">2</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <!-- Jupiter -->
+              <article
+                class="bg-white/5 border border-white/10 rounded-[10px] p-6 border-t-[3px] border-t-[#ef476f] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(239,71,111,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">Jupiter</h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  The largest planet — its Great Red Spot is a storm larger than
+                  Earth that has raged for <strong>hundreds of years</strong>.
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#ef476f] font-semibold">142,984 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Moons</dt>
+                    <dd class="text-[#ef476f] font-semibold">95</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <!-- Saturn -->
+              <article
+                class="bg-white/5 border border-white/10 rounded-[10px] p-6 border-t-[3px] border-t-[#ef476f] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(239,71,111,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">Saturn</h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  Famous for its stunning ring system made of ice and rock. It
+                  is the least dense planet — it would
+                  <strong>float in water</strong>.
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#ef476f] font-semibold">120,536 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Moons</dt>
+                    <dd class="text-[#ef476f] font-semibold">146</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <!-- Uranus -->
+              <article
+                class="bg-white/5 border border-white/10 rounded-[10px] p-6 border-t-[3px] border-t-[#ffd166] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(255,209,102,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">Uranus</h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  An ice giant that rotates on its <strong>side</strong> — its
+                  axial tilt is a jaw-dropping 98°.
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#ffd166] font-semibold">51,118 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Moons</dt>
+                    <dd class="text-[#ffd166] font-semibold">28</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <!-- Neptune -->
+              <article
+                class="bg-white/5 border border-white/10 rounded-[10px] p-6 border-t-[3px] border-t-[#ffd166] hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(255,209,102,0.3)] transition-all duration-300"
+              >
+                <h4 class="font-serif text-lg font-bold mb-2">Neptune</h4>
+                <p class="text-sm text-[#a8b2c1] mb-4 leading-relaxed">
+                  The windiest planet — gusts can reach
+                  <strong>2,100 km/h</strong>. It was the first planet located
+                  via mathematical prediction.
+                </p>
+                <dl class="flex flex-col gap-1 text-sm">
+                  <div
+                    class="flex justify-between py-1 border-b border-white/10"
+                  >
+                    <dt class="text-[#a8b2c1]">Diameter</dt>
+                    <dd class="text-[#ffd166] font-semibold">49,528 km</dd>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <dt class="text-[#a8b2c1]">Moons</dt>
+                    <dd class="text-[#ffd166] font-semibold">16</dd>
+                  </div>
+                </dl>
+              </article>
+            </div>
+          </section>
+
+          <!-- ===== EXPLORATION ===== -->
+          <section id="exploration" class="mt-8">
+            <h3 class="font-serif text-2xl font-bold text-[#ffd166] mb-6">
+              Space Exploration Timeline
+            </h3>
+
+            <div class="timeline relative pl-10">
+              <div
+                class="timeline__item relative mb-6 before:absolute before:-left-10 before:top-1 before:w-4 before:h-4 before:rounded-full before:bg-[#48cae4] before:border-[3px] before:border-[#0b0e1a] before:shadow-[0_0_0_2px_#48cae4]"
+              >
+                <time
+                  class="font-serif text-2xl font-bold text-[#48cae4] block mb-1"
+                  datetime="1957-10-04"
+                  >1957</time
+                >
+                <p class="text-[#a8b2c1]">
+                  <strong class="text-[#edf2f4]">Sputnik 1</strong> — the first
+                  artificial satellite, launched by the Soviet Union.
+                </p>
+              </div>
+              <div
+                class="timeline__item relative mb-6 before:absolute before:-left-10 before:top-1 before:w-4 before:h-4 before:rounded-full before:bg-[#48cae4] before:border-[3px] before:border-[#0b0e1a] before:shadow-[0_0_0_2px_#48cae4]"
+              >
+                <time
+                  class="font-serif text-2xl font-bold text-[#48cae4] block mb-1"
+                  datetime="1969-07-20"
+                  >1969</time
+                >
+                <p class="text-[#a8b2c1]">
+                  <strong class="text-[#edf2f4]">Apollo 11</strong> — humans
+                  first set foot on the Moon.
+                  <q class="block italic mt-1 opacity-85"
+                    >"That's one small step for man…"</q
+                  >
+                </p>
+              </div>
+              <div
+                class="timeline__item relative mb-6 before:absolute before:-left-10 before:top-1 before:w-4 before:h-4 before:rounded-full before:bg-[#48cae4] before:border-[3px] before:border-[#0b0e1a] before:shadow-[0_0_0_2px_#48cae4]"
+              >
+                <time
+                  class="font-serif text-2xl font-bold text-[#48cae4] block mb-1"
+                  datetime="1977-08-20"
+                  >1977</time
+                >
+                <p class="text-[#a8b2c1]">
+                  <strong class="text-[#edf2f4]">Voyager 2</strong> launched —
+                  it later became the only spacecraft to visit Uranus and
+                  Neptune.
+                </p>
+              </div>
+              <div
+                class="timeline__item relative mb-6 before:absolute before:-left-10 before:top-1 before:w-4 before:h-4 before:rounded-full before:bg-[#48cae4] before:border-[3px] before:border-[#0b0e1a] before:shadow-[0_0_0_2px_#48cae4]"
+              >
+                <time
+                  class="font-serif text-2xl font-bold text-[#48cae4] block mb-1"
+                  datetime="1990-04-24"
+                  >1990</time
+                >
+                <p class="text-[#a8b2c1]">
+                  The
+                  <strong class="text-[#edf2f4]">Hubble Space Telescope</strong>
+                  launched, revolutionising astronomy with breathtaking
+                  deep-space images.
+                </p>
+              </div>
+              <div
+                class="timeline__item relative before:absolute before:-left-10 before:top-1 before:w-4 before:h-4 before:rounded-full before:bg-[#48cae4] before:border-[3px] before:border-[#0b0e1a] before:shadow-[0_0_0_2px_#48cae4]"
+              >
+                <time
+                  class="font-serif text-2xl font-bold text-[#48cae4] block mb-1"
+                  datetime="2021-12-25"
+                  >2021</time
+                >
+                <p class="text-[#a8b2c1]">
+                  <strong class="text-[#edf2f4]"
+                    >James Webb Space Telescope</strong
+                  >
+                  launched — the most powerful space telescope ever built.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===== ASIDE ===== -->
+          <aside
+            class="mt-8 p-8 rounded-[10px] bg-gradient-to-br from-[#ffd166]/10 to-[#131a33] border border-[#ffd166]/30"
+            role="complementary"
+            aria-labelledby="aside-title"
+          >
+            <h3 class="font-serif text-2xl font-bold mb-4" id="aside-title">
+              <span aria-hidden="true">🌠</span> Did You Know?
+            </h3>
+            <p class="text-[#a8b2c1]">
+              The Sun accounts for about
+              <strong class="text-[#edf2f4]">99.86%</strong> of the total mass
+              of the Solar System. You could fit roughly
+              <strong class="text-[#edf2f4]">1.3 million Earths</strong> inside
+              the Sun!
+            </p>
+            <details
+              class="mt-6 p-4 bg-white/5 rounded-[6px] border border-white/10"
+            >
+              <summary
+                class="cursor-pointer font-semibold text-[#48cae4] hover:text-[#ffd166] transition-colors"
+              >
+                How do we know this?
+              </summary>
+              <p class="mt-4 text-sm text-[#a8b2c1]">
+                Scientists calculate the Sun's mass by observing the orbital
+                periods of the planets using
+                <strong class="text-[#edf2f4]"
+                  >Kepler's laws of planetary motion</strong
+                >
+                and
+                <strong class="text-[#edf2f4]"
+                  >Newton's law of universal gravitation</strong
+                >.
+              </p>
+            </details>
+          </aside>
+
+          <footer
+            class="mt-8 pt-6 border-t border-white/10 text-sm text-[#a8b2c1]"
+          >
+            <p>
+              Article compiled from public sources. Images courtesy of
+              <a
+                class="text-[#48cae4] underline hover:text-[#ffd166] transition-colors"
+                href="https://unsplash.com"
+                >Unsplash</a
+              >.
+            </p>
+          </footer>
+        </article>
+
+        <!-- ===== GLOSSARY ===== -->
+        <section id="glossary" class="mt-12" aria-labelledby="glossary-title">
+          <h2
+            class="font-serif text-3xl sm:text-4xl font-bold text-[#ffd166] mb-6"
+            id="glossary-title"
+          >
+            <span aria-hidden="true">📖</span> Glossary of Terms
+          </h2>
+
+          <dl class="flex flex-col gap-4">
+            <div
+              class="p-4 pl-6 bg-white/5 border border-white/10 rounded-[6px] hover:border-[#48cae4] transition-colors"
+            >
+              <dt class="font-bold text-[#48cae4] mb-1">Terrestrial Planet</dt>
+              <dd class="text-sm text-[#a8b2c1]">
+                A planet composed primarily of silicate rocks or metals. The
+                four inner planets — Mercury, Venus, Earth, Mars — are
+                terrestrial.
+              </dd>
+            </div>
+            <div
+              class="p-4 pl-6 bg-white/5 border border-white/10 rounded-[6px] hover:border-[#48cae4] transition-colors"
+            >
+              <dt class="font-bold text-[#48cae4] mb-1">Gas Giant</dt>
+              <dd class="text-sm text-[#a8b2c1]">
+                A large planet composed mostly of hydrogen and helium. Jupiter
+                and Saturn are gas giants.
+              </dd>
+            </div>
+            <div
+              class="p-4 pl-6 bg-white/5 border border-white/10 rounded-[6px] hover:border-[#48cae4] transition-colors"
+            >
+              <dt class="font-bold text-[#48cae4] mb-1">Ice Giant</dt>
+              <dd class="text-sm text-[#a8b2c1]">
+                A giant planet made of heavier volatile elements — water,
+                methane, and ammonia — above a rocky core. Uranus and Neptune
+                are ice giants.
+              </dd>
+            </div>
+            <div
+              class="p-4 pl-6 bg-white/5 border border-white/10 rounded-[6px] hover:border-[#48cae4] transition-colors"
+            >
+              <dt class="font-bold text-[#48cae4] mb-1">Asteroid Belt</dt>
+              <dd class="text-sm text-[#a8b2c1]">
+                A region between Mars and Jupiter containing millions of rocky
+                bodies, the largest being the dwarf planet
+                <em class="text-[#edf2f4]">Ceres</em>.
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </main>
+
+      <!-- ===== ASIDE: SIDEBAR ===== -->
+      <aside
+        class="lg:sticky lg:top-6 self-start flex flex-col gap-6"
+        role="complementary"
+        aria-label="Quick facts and further reading"
+      >
+        <div class="bg-white/5 border border-white/10 rounded-[10px] p-6">
+          <h3 class="font-serif text-lg font-bold text-[#ffd166] mb-4">
+            <span aria-hidden="true">🔭</span> Quick Facts
+          </h3>
+          <ul class="flex flex-col gap-2">
+            <li class="text-sm text-[#a8b2c1] py-1 border-b border-white/10">
+              Sun diameter: 1,391,000 km
+            </li>
+            <li class="text-sm text-[#a8b2c1] py-1 border-b border-white/10">
+              Largest planet: Jupiter
+            </li>
+            <li class="text-sm text-[#a8b2c1] py-1 border-b border-white/10">
+              Smallest planet: Mercury
+            </li>
+            <li class="text-sm text-[#a8b2c1] py-1 border-b border-white/10">
+              Hottest planet: Venus (462 °C)
+            </li>
+            <li class="text-sm text-[#a8b2c1] py-1 border-b border-white/10">
+              Coldest planet: Neptune (−218 °C)
+            </li>
+            <li class="text-sm text-[#a8b2c1] py-1">
+              Farthest from Sun: Neptune
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-[10px] p-6">
+          <h3 class="font-serif text-lg font-bold text-[#ffd166] mb-4">
+            <span aria-hidden="true">📚</span> Further Reading
+          </h3>
+          <ul class="flex flex-col gap-2">
+            <li class="text-sm py-1 border-b border-white/10">
+              <a
+                class="text-[#48cae4] font-semibold hover:text-[#ffd166] transition-colors"
+                href="https://en.wikipedia.org/wiki/Solar_System"
+                >Solar System — Wikipedia</a
+              >
+            </li>
+            <li class="text-sm py-1 border-b border-white/10">
+              <a
+                class="text-[#48cae4] font-semibold hover:text-[#ffd166] transition-colors"
+                href="https://science.nasa.gov/solar-system/"
+                >NASA Solar System Exploration</a
+              >
+            </li>
+            <li class="text-sm py-1">
+              <a
+                class="text-[#48cae4] font-semibold hover:text-[#ffd166] transition-colors"
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+                >MDN: HTML elements reference</a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ===== PAGE FOOTER ===== -->
+    <footer
+      class="max-w-[1200px] mx-auto px-6 py-8 mt-8 mb-4 rounded-[16px] bg-gradient-to-r from-[#131a33] to-transparent border border-white/10"
+      id="contact"
+      role="contentinfo"
+    >
+      <div class="flex flex-wrap justify-between items-baseline gap-6">
+        <address class="not-italic text-sm text-[#a8b2c1] leading-relaxed">
+          <strong class="text-[#edf2f4]">Cosmos Education Project</strong><br />
+          123 Galaxy Way, Space City, SC 98765<br />
+          <a
+            class="text-[#48cae4] hover:text-[#ffd166] transition-colors"
+            href="mailto:hello@cosmos.demo"
+            >hello@cosmos.demo</a
+          >
+        </address>
+
+        <p class="text-sm text-[#a8b2c1]">
+          &copy; 2026 Cosmos Education Project &middot; Built with
+          <abbr
+            class="underline decoration-dotted cursor-help"
+            title="Semantic HTML"
+            >semantic HTML</abbr
+          >
+          &amp;
+          <abbr
+            class="underline decoration-dotted cursor-help"
+            title="Tailwind CSS 4"
+            >Tailwind CSS 4</abbr
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
