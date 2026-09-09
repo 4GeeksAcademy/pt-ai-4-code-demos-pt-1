@@ -1,17 +1,8 @@
 /* ============================================================
-   Tailwind CSS 4 Supplement — "Exploring the Cosmos" Demo
-   ============================================================
-   Minimal custom CSS to supplement Tailwind utility classes.
-   The bulk of styling lives in index.html as Tailwind classes.
+   Custom CSS — "Exploring the Cosmos" Demo
    ============================================================ */
 
-/* ----- 1. SMOOTH SCROLL ----- */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
-}
-
-/* ----- 2. SKIP LINK (a11y) ----- */
+/* ----- Skip link (a11y): visually hidden until focused ----- */
 .skip-link {
   position: absolute;
   width: 1px;
@@ -35,29 +26,34 @@ html {
   overflow: visible;
   clip: auto;
   white-space: normal;
-  background: #0b0e1a;
-  color: #48cae4;
+  background: var(--color-deep-space);
+  color: var(--color-accent-teal);
   font-weight: 700;
   font-size: 1.0625rem;
-  border: 2px solid #48cae4;
+  border: 2px solid var(--color-accent-teal);
   border-radius: 6px;
   z-index: 1000;
   text-decoration: none;
 }
 
-/* ----- 3. TIMELINE VERTICAL LINE ----- */
+/* ----- Timeline vertical line ----- */
+/* Centering math (Tailwind border-box):
+   Horizontal: pl-10 (40px) + item dot -left-10 (-40px) => dot's left
+   edge at 0px. Dot is w-4 (16px total incl. 3px borders) => center at
+   8px. 2px line centered at 8px => left: 7px.
+   Vertical: dot top-1 (4px) + half of 16px dot (8px) => dot center is
+   12px from item top. */
 .timeline::before {
   content: "";
   position: absolute;
-  inset-block: 0;
-  left: 11px;
+  top: 12px;
+  bottom: 0;
+  left: 7px;
   width: 2px;
-  background: linear-gradient(to bottom, #48cae4, transparent);
+  background: linear-gradient(to bottom, var(--color-accent-teal), transparent);
 }
 
-/* ----- 4. ACCESSIBILITY PREFERENCES ----- */
-
-/* Respect user motion preferences */
+/* ----- Accessibility preferences ----- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -69,7 +65,6 @@ html {
   }
 }
 
-/* High contrast mode adjustments */
 @media (prefers-contrast: more) {
   body {
     background: #000 !important;
